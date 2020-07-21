@@ -24,6 +24,22 @@ $(document).ready(init);
 
     }
 
+    // function addNewColorNumberListener() {
+    //
+    //   $(document).on("click", ".quadrato", function(){
+    //
+    //     var quadratoCorrente = $(this);
+    //
+    //     if (!(quadratoCorrente.hasClass("giallo")) && !(quadratoCorrente.hasClass("verde"))) {
+    //       console.log("giallo",!(quadratoCorrente.hasClass("giallo")));
+    //       console.log("verde",!(quadratoCorrente.hasClass("verde")));
+    //       getNewColorNumberListener(quadratoCorrente);
+    //     }
+    //
+    //   });
+    //
+    // }
+
       function getNewColorNumberListener(tag) {
 
         $.ajax({
