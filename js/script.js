@@ -8,37 +8,38 @@ $(document).ready(init);
   function init(){
     addNewColorNumberListener();
   }
-
-    function addNewColorNumberListener() {
-
-      $(document).on("click", ".quadrato", function(){
-
-        var quadratoCorrente = $(this);
-
-        quadratoCorrente.text("");
-        quadratoCorrente.removeClass("giallo","verde");
-
-        getNewColorNumberListener(quadratoCorrente);
-
-      });
-
-    }
-
+    //CON QUESTA FUNZIONE POSSO CLICCARE QUANTE VOLTE VOGLIO SU OGNI QUADRATO DELLA GRIGLIA
     // function addNewColorNumberListener() {
     //
     //   $(document).on("click", ".quadrato", function(){
     //
     //     var quadratoCorrente = $(this);
     //
-    //     if (!(quadratoCorrente.hasClass("giallo")) && !(quadratoCorrente.hasClass("verde"))) {
-    //       console.log("giallo",!(quadratoCorrente.hasClass("giallo")));
-    //       console.log("verde",!(quadratoCorrente.hasClass("verde")));
-    //       getNewColorNumberListener(quadratoCorrente);
-    //     }
+    //     quadratoCorrente.text("");
+    //     quadratoCorrente.removeClass("giallo","verde");
+    //
+    //     getNewColorNumberListener(quadratoCorrente);
     //
     //   });
     //
     // }
+
+    // CON QUESTA FUNZIONE POSSO CLICCARE UNA SOLA VOLTA SU OGNI QUADRATO DELLA GRIGLIA
+    function addNewColorNumberListener() {
+
+      $(document).on("click", ".quadrato", function(){
+
+        var quadratoCorrente = $(this);
+
+        if (!(quadratoCorrente.hasClass("giallo")) && !(quadratoCorrente.hasClass("verde"))) {
+          console.log("giallo",!(quadratoCorrente.hasClass("giallo")));
+          console.log("verde",!(quadratoCorrente.hasClass("verde")));
+          getNewColorNumberListener(quadratoCorrente);
+        }
+
+      });
+
+    }
 
       function getNewColorNumberListener(tag) {
 
